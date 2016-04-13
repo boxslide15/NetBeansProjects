@@ -1,0 +1,67 @@
+Please enter length of first side: 9
+
+Please enter length of second side: 9
+
+Please enter length of third side: 9
+
+Triangle length first side: 9, second side: 9, third side: 9
+Triangle type: Equilateral triangle
+The area of the triangle is: 35.07
+================================================================
+Please enter length of first side: 4
+
+Please enter length of second side: 3
+
+Please enter length of third side: 5
+
+Triangle length first side: 4, second side: 3, third side: 5
+Triangle type: Right triangle.
+The area of the triangle is: 6.00
+================================================================
+Please enter length of first side: 13
+
+Please enter length of second side: 5
+
+Please enter length of third side: 12
+
+Triangle length first side: 13, second side: 5, third side: 12
+Triangle type: Right triangle.
+The area of the triangle is: 30.00
+================================================================
+Please enter length of first side: 3
+
+Please enter length of second side: 7
+
+Please enter length of third side: 3
+
+Triangle length first side: 3, second side: 7, third side: 3
+Triangle type: The side lengths don't form a triangle
+================================================================
+Please enter length of first side: 2
+
+Please enter length of second side: 6
+
+Please enter length of third side: 3
+
+Triangle length first side: 2, second side: 6, third side: 3
+Triangle type: The side lengths don't form a triangle
+================================================================
+Please enter length of first side: 9
+
+Please enter length of second side: 8
+
+Please enter length of third side: 8
+
+Triangle length first side: 9, second side: 8, third side: 8
+Triangle type: Acute Iscosceles triangle.
+The area of the triangle is: 29.76
+================================================================
+Please enter length of first side: 5
+
+Please enter length of second side: 8
+
+Please enter length of third side: 4
+
+Triangle length first side: 5, second side: 8, third side: 4
+Triangle type: Obtuse triangle.
+The area of the triangle is: 8.18

@@ -1,0 +1,34 @@
+run:
+
+Amount Due:      $  12.34
+Amount Received: $  20.00
+
+Your change:
+	7 dollar(s)
+	2 quarter(s)
+	1 dime(s)
+	1 nickel(s)
+	1 penny
+
+Thanks and have a nice day!
+BUILD SUCCESSFUL (total time: 6 seconds)
+
+=========================================
+
+run:
+
+Amount Due:      $  20.25
+Amount Received: $  10.50
+
+Lo siento, you still owe me another 9.75
+BUILD SUCCESSFUL (total time: 9 seconds)
+
+=========================================
+
+run:
+
+Amount Due:      $  36.73
+Amount Received: $  36.73
+
+Exact change! Thanks and have a nice day!
+BUILD SUCCESSFUL (total time: 7 seconds)
