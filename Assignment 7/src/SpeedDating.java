@@ -20,21 +20,10 @@
      * @param theDay the day of the birthday
      */
      public void happyBirthDaze(int theMonth, int theDay)
-     {
-         // local variables
-         int currentYear = 2015;
-         int finalYear = 2025;
-         int monthOfBirthday = theMonth;
-         int dayOfBirthday = theDay;
-         
-         // create a Date() object with parameters set by the user
-         Date d1 = new Date(monthOfBirthday, dayOfBirthday, currentYear);
-         
-         while(currentYear <= finalYear){
-             d1.getMonthName();
-             d1.getDayOfWeek();
-             currentYear ++;
-             
+     {         
+         for (int currentYear = 2015; currentYear <= 2025; currentYear++){                                          // for all the years from 2015-2025...
+             Date d1 = new Date(theMonth, theDay, currentYear);                                                     // create a Date() object with parameters set by the user
+             System.out.println("Your birthday is on a " + d1.getDayOfWeek() + " in the year: " + currentYear);     // print the day of the week on which the users birthday falls
          }
      }
 
@@ -50,7 +39,15 @@
      */
       public Date pollDancer(int year)
      {
-         // TO DO: write the body of this method here
+         int day = 1;
+         Date myDate = new Date(11, day, year);             // create a date object
+         while (!"Monday".equals(myDate.getDayOfWeek())){   // checks to see if its the first Monday of the month
+             myDate.next();
+         }
+         if (!"Tuesday".equals(myDate.getDayOfWeek())){     // checks to see if the first Tuesday of the month is after the first Monday of the month
+                 myDate.next();
+             }
+         return myDate;                                     // return the Election day for that year
      }
 
 
@@ -63,6 +60,13 @@
       */
       public int iExcel(Date aDate)
       {
- 	 // TO DO: write the body of this method here
+ 	 Date excelDate = new Date(1, 1, 1900);    // create the excel date to compare number of days
+         Date myDate = aDate;                      // the user inputed Date
+         int day = 1;                              // initialized the counter
+         while (!myDate.equals(excelDate)){        // check to see if the user Date is the same as the excel Date
+             day++;                                // add one day to the counter
+             myDate.previous();                    // moves the user inputed Date back to the excel Date
+         }
+         return day;
       }
  }
