@@ -2,34 +2,34 @@
  *
  * @author boxslide15
  */
-import java.util.Scanner;
 public class MortgageTester {
 
     public static void main(String[] args) {
-        double amount, rate;
-        int term;
-        String str;
-        Scanner in = new Scanner(System.in);
-        Mortgage mortgage1 = new Mortgage();
         
-        System.out.printf("Payment of mortgage 1: %.2f\n", mortgage1.computePayment());
+        Mortgage mortgage[] = new Mortgage[3]; 
         
-        do{
-            System.out.print("Please enter the principal ammount: ");
-            amount = in.nextDouble();
+        mortgage[0] = new Mortgage(200000, 5, 30);
+        mortgage[1] = new Mortgage(200000, 4, 15);
+        mortgage[2] = new Mortgage(500000, 2, 30);
         
-            System.out.print("\nPlease enter the rate: ");
-            rate = in.nextDouble();
+        //for (int i = 0; i < mortgage.length; i++){
+        //    mortgage[i] = new Mortgage();
+        //}
         
-            System.out.print("\nPlease enter the term: ");
-            term = in.nextInt();
+        //mortgage[0].setPrincipal(200000);
+        //mortgage[0].setRate(5);
+        //mortgage[0].setYear(30);
         
-            Mortgage myMortgage = new Mortgage(amount, rate, term);
+        //mortgage[1].setPrincipal(200000);
+        //mortgage[1].setRate(4);
+        //mortgage[1].setYear(15);
         
-            System.out.printf("Payment of mortgage 2: %.2f\n", myMortgage.computePayment());
-            System.out.println("Do you want to continue?: ");
-            str = in.next();
+        //mortgage[2].setPrincipal(500000);
+        //mortgage[2].setRate(2);
+        //mortgage[2].setYear(30);
+        
+        for (int i = 0; i < mortgage.length; i++){
+            System.out.printf("The payment is: %.2f\n", mortgage[i].computePayment());
         }
-        while(str.equalsIgnoreCase("y"));
     }   
 }
