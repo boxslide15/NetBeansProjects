@@ -1,18 +1,19 @@
 /**
  * A class to implement a Polynomial as a list of terms, where each term has
  * an integer coefficient and a nonnegative integer exponent
- * @author your name
+ * @author Luis Hernandez
  */
-public class Polynomial
-{
-   // instance variable declarations go here
+import java.util.ArrayList;
+public class Polynomial{
+
+   private ArrayList<Term> myList;
 
    /**
     * Creates a new Polynomial object with no terms
     */
    public Polynomial()
    {
-      // TO DO: Write constructor body here
+      myList = new ArrayList<Term>();
    }
 
    /**
@@ -22,22 +23,56 @@ public class Polynomial
     */
    public void insert(int coeff, int expo)
    {
-      // TO DO: write method body here.  The following statement is included
-      // only for development purposes.  Remove after implementing the method 
+      Term newTerm = new Term(coeff, expo);
+
+      if (myList.isEmpty()){
+        myList.add(newTerm);
+      }
+      else{
+        for (int i = 0; i < myList.size(); i++){
+
+          Term insertTerm = myList.get(i);
+
+          int insertExp = insertTerm.getExponent();
+
+          if (expo <= myList.get(myList.size() - 1).getExponent()){
+            myList.add(newTerm);
+          }
+          else if (insertExp <= expo){
+              myList.add(i, newTerm);
+          }
+
+        }
+      }
       System.out.println("insert method called for " + coeff + " " + expo) ;
    }
 
    /**
     * Deletes the first occurrence of a specified term from a Polynomial, or
-    * prints an appropriate message if the term does not appear in the 
+    * prints an appropriate message if the term does not appear in the
     * Polynomial
     * @param coeff the coeffiecent of the term to be deleted
     * @param expo the exponent of the term to be deleted
     */
    public void delete (int coeff, int expo)
    {
-      // TO DO: write method body here.  The following statement is included
-      // only for development purposes.  Remove after implementing the method 
+      int index = 0;
+      boolean removed = false;
+      for (int i = 0; i < myList.size(); i++){
+
+        Term deleteTerm = myList.get(i);
+
+        if (deleteTerm.getCoefficient() == coeff && deleteTerm.getExponent() == expo){
+          myList.remove(i);
+          System.out.println("Removed term from array");
+          removed = true;
+        }
+      }
+
+      if (removed == false){
+        System.out.println("Term wasn't found, nothing removed");
+      }
+
       System.out.println("delete method called for " + coeff + " " + expo) ;
    }
 
@@ -48,10 +83,18 @@ public class Polynomial
     */
    public String product()
    {
-      // TO DO: write method body here.  The following statements are included
-      // only for development purposes.  Remove after implementing the method
+      int coeffProduct = myList.get(0).getCoefficient();
+      int expoProduct = myList.get(0).getExponent();
+
+      for (int i = 1; i < myList.size(); i++){
+        coeffProduct *= myList.get(i).getCoefficient();
+        expoProduct += myList.get(i).getExponent();
+      }
+
+      Term product = new Term(coeffProduct, expoProduct);
+
       System.out.println("product method called") ;
-      return "product method is under construction" ;
+      return product.toString();
    }
 
    /**
@@ -60,12 +103,18 @@ public class Polynomial
     */
    public String toString()
    {
-      // TO DO: write method body here.  The following statements are included
-      // only for development purposes.  Remove after implementing the method
+      String expression = "";
+
+      for (int i = 0; i < myList.size(); i++){
+        Term addTerm = myList.get(i);
+        String termString = addTerm.toString();
+        expression = expression.concat(termString);
+      }
+
       System.out.println("toString method called") ;
-      return "toString method is under construction" ;
+      return expression;
    }
-   
+
    /**
     * Reverses the order of the terms of a Polynomial.
     * E.g. the polynomial 3x^2 + 7x^3 + 2x^5 would be 2x^5 + 7x^3 + 3x^2 after
@@ -73,8 +122,17 @@ public class Polynomial
     */
    public void reverse()
    {
-      // TO DO: write method body here.  The following statement is included
-      // only for development purposes.  Remove after implementing the method
+      ArrayList<Term> reverseTerm = new ArrayList<Term>();
+      
+      for (int i = myList.size(); i >= 0; i--){
+          reverseTerm.add(myList.get(i));
+      }
+      
+      for (int i = 0; i < myList.size(); i++){
+          myList.remove(i);
+          myList.add(i, reverseTerm.get(i));
+      }
+      
       System.out.println("reverse method called") ;
    }
 }
