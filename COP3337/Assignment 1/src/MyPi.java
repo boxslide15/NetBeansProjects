@@ -14,7 +14,9 @@ public class MyPi {
         
         int iterations = 0;
         double fraction = 3;
-        final String PI_OVER_FOUR_TRUNC = "0.785398";
+        double deltaA = 0;
+        double deltaB = 0;
+        final double EPSILON = 1E-7;
         
         /**
          * The accuracy of the computation of pi increases as the do loop 
@@ -31,11 +33,13 @@ public class MyPi {
         {
            fraction += 2;
            piOverFour += (1 / fraction);
+           deltaA = piOverFour;
            fraction += 2;
            piOverFour -= (1 / fraction);
+           deltaB = piOverFour;
            iterations++;
         }
-        while(!Double.toString(piOverFour).startsWith(PI_OVER_FOUR_TRUNC));
+        while(!(Math.abs(deltaA - deltaB) <= EPSILON));
         /**
          * The while condition compares an instance when the value of piOverFour
          * starts with the string PI_OVER_FOUR_TRUNC, which has the requisite 
