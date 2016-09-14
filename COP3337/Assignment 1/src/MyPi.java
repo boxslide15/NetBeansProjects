@@ -13,9 +13,9 @@ public class MyPi {
     public static void main(String[] args) {
         
         int iterations = 0;
-        double fraction = 3;
-        double deltaA = 0;
-        double deltaB = 0;
+        double fraction = 3.0;
+        double deltaA = 0.0;
+        double deltaB = 0.0;
         final double EPSILON = 1E-7;
         
         /**
@@ -28,12 +28,13 @@ public class MyPi {
          */
         
         double piOverFour = 1 - (1 / fraction);
-        
+
         do 
         {
            fraction += 2;
            piOverFour += (1 / fraction);
            deltaA = piOverFour;
+           iterations++;
            fraction += 2;
            piOverFour -= (1 / fraction);
            deltaB = piOverFour;
@@ -46,9 +47,9 @@ public class MyPi {
          * six significant figures for the calculation.
          */
         
-        System.out.println("Computed pi: " + (piOverFour * 4) //Multiply by 
-                + " \nMath.PI library: "                      //4 to get pi 
-                + Math.PI + " \nIterations: " + iterations); 
+        System.out.println("Computed pi:     " + (piOverFour * 4) //Multiply by 
+                + " \nMath.PI library: "                          //4 to get pi 
+                + Math.PI + " \nIterations:      " + iterations); 
     }
        
 }

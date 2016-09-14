@@ -16,19 +16,23 @@ public class PolynomialTester {
 
         while(file.hasNext()){
             String action = file.next();
+            
             if (action.equals("INSERT")){
-                myPoly.insert(file.nextInt(), file.nextInt());
+                int a = file.nextInt();
+                int b = file.nextInt();
+                
+                myPoly.insert(a,b);
             }
-            if (action.equals("PRODUCT")){
+            else if (action.equals("PRODUCT")){
                 System.out.println("The product is: " + myPoly.product());
             }
-            if (action.equals("DELETE")){
+            else if (action.equals("DELETE")){
                 myPoly.delete(file.nextInt(), file.nextInt());
             }
-            if (action.equals("REVERSE")){
+            else if (action.equals("REVERSE")){
                 myPoly.reverse();
             }
-            System.out.println("The polynomial is: " + myPoly.toString());
+            System.out.println("The polynomial is: " + myPoly);
 
         }
     }

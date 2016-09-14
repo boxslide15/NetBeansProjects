@@ -29,7 +29,7 @@ public class Polynomial{
         myList.add(newTerm);
       }
       else{
-        for (int i = 0; i < myList.size(); i++){
+        for (int i = 0; i < myList.size()-1; i++){
 
           Term insertTerm = myList.get(i);
 
@@ -105,7 +105,7 @@ public class Polynomial{
    {
       String expression = "";
 
-      for (int i = 0; i < myList.size(); i++){
+      for (int i = 0; i < myList.size()-1; i++){
         Term addTerm = myList.get(i);
         String termString = addTerm.toString();
         expression = expression.concat(termString);
