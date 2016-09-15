@@ -1,0 +1,13 @@
+The Triangle class will contain three Point2D instance variables which represent the three points of a triangle.
+The constructor will have three parameters, the three Point2D objects that represent the points on a triangle.
+The class will have accessor and mutator methods for the three instance vairables.
+Other methods will include:
+1) a method to calculate each of the triangle using the Point2D.distance method,
+2) a method to calculate the perimeter of the triangle using the method that calculates the sides,
+3) a method to calculate the area of the triangle using Heron's formula
+4) a method that computes the angles of each point using the law of cosines
+5) a method determines if the triangle object created is an acutal triangle
+
+The Triangle teser class should contain three Point2D objects for the parameters of the Triangle object, 
+the scanner object to record the user inputs, prompts to record user input, and the required output formatted
+to look like a table. 
