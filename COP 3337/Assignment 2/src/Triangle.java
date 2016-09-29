@@ -127,16 +127,6 @@ public class Triangle {         //properties of a triangle
     }
     
     /**
-     * A method to compute if the object is a valid triangle
-     * @return if the Triangle object is actually a triangle
-     */
-    public boolean isTriangle(){
-        return computeSide1() + computeSide2() > computeSide3() 
-                && computeSide2() + computeSide3() > computeSide1() 
-                && computeSide1() + computeSide3() > computeSide2();
-    }
-    
-    /**
      * A method to compute the angle of the first point by using law of cosines
      * Acos (point1) = ((side1)^2 + (side2)^2 - (side3)^2) / 2 * side1 * side2
      * @return the angle at point1 to the nearest degree
