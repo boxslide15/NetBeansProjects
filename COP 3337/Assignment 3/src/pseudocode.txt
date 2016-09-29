@@ -1,0 +1,11 @@
+The TicTacToe class should contain a board array and a player instance variable.
+The constructor will not have any parameters, it should construct the TicTacToe
+board without them. The method that should include the class are methods to
+print the board, a method that checks if the board is full, a method that
+computes if there's a winner, a method that gets the current player
+mark, a method that places the player's mark on the board, and a method that 
+changes the player's mark.
+
+The TicTacToeTester class should contain user prompts for the row and column
+that the user wants to mark and should include input validation should the 
+user enter an invalid row or column. 
