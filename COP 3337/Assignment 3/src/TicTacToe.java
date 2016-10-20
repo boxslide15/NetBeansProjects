@@ -17,7 +17,7 @@
  */
 public class TicTacToe {
 
-    private char[][] board;
+    private char[][] board = new char[3][3];
     private char player;
     
     /**
@@ -27,8 +27,8 @@ public class TicTacToe {
     public TicTacToe(){
         board = new char[3][3];
         player = 'x';
-        for (int i = 0; i < 3; i++){
-            for (int j = 0; j < 3; j++){
+        for (int i = 0; i < board[i].length; i++){
+            for (int j = 0; j < board[j].length; j++){
                 board[i][j] = ' ';
             }
         }

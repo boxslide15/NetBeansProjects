@@ -1,0 +1,7 @@
+The BetterTriangle class will inherit all of the methods and instance variables 
+of the Rectangle class. The BetterRectangle class should contain methods to 
+compute the area and perimeter of the rectangle. The BetterRectangle class will 
+override the toString() method and will output the instance values of the super
+class as well as the values for area and perimeter. The BetterRectangleTester 
+class will contain multiple BetterRectangle objects that will test the use of
+the toString() method as well as the equals() method.
