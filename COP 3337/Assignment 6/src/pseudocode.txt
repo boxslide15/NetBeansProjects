@@ -1,0 +1,9 @@
+The RecursiveFib class will contain a method that recursively computes fibonacci
+numbers up to n. The recursive formula I will use for the computation is:
+    base cases f(0) =  0, f(1) = 1
+    f(n) = f(n - 1) + f(n - 2);
+The FastRecursiveFib class will use the same method as the RecursiveFib, only
+this time it will be optimized by storing the last computed Fibonacci number.
+The IterativeFib class will compute Fibonacci numbers iteratively using the
+example found on Pg 607 of the Big Java book.
+

@@ -1,0 +1,9 @@
+		Fast Recursive Fibonacci Sequence
+ 0 | 1 | 1 | 2 | 3 | 5 | 8 | 13 | 21 | 34 | 55 | 89 | 144 | 233 | 377 | 610 | 987 | 1597 | 2584 | 4181 | 6765 | 10946 | 17711 | 28657 | 46368 | 75025 |
+		Time to execute in Miliseconds: 1480600453982
+		Recursive Fibonacci Sequence
+ 0 | 1 | 1 | 2 | 3 | 5 | 8 | 13 | 21 | 34 | 55 | 89 | 144 | 233 | 377 | 610 | 987 | 1597 | 2584 | 4181 | 6765 | 10946 | 17711 | 28657 | 46368 | 75025 |
+		Time to execute in Miliseconds: 1480600453986
+		Iterative Fibonacci Sequence
+ 1 | 1 | 1 | 2 | 3 | 5 | 8 | 13 | 21 | 34 | 55 | 89 | 144 | 233 | 377 | 610 | 987 | 1597 | 2584 | 4181 | 6765 | 10946 | 17711 | 28657 | 46368 | 75025 |
+		Time to execute in Miliseconds: 1480600453987
