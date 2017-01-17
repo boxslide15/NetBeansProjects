@@ -24,9 +24,12 @@ public class LoopFib {
      */
     public static long loopFib(int number){
         
-        if (number <= 2){ 
-          return 1;
+        if (number == 0){ 
+          return 0;
         }
+		else if (number == 1){
+		   return 1;
+		}
         else{
             long olderValue = 1;
             long oldValue = 1;

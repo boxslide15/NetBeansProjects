@@ -51,7 +51,7 @@ public class FibTester {
             output.print("\n\t\tTime to execute in Miliseconds: " 
                     + System.currentTimeMillis());
             
-            output.println("\n\t\tRecursive Fibonacci Sequence");
+            output.println("\n\n\t\tRecursive Fibonacci Sequence");
             
             for (int i = 0; i <= userInput; i++){
                 output.print(" " + RecursiveFib.computeFib(i) + " |");
@@ -60,7 +60,7 @@ public class FibTester {
             output.print("\n\t\tTime to execute in Miliseconds: " 
                     + System.currentTimeMillis());
             
-            output.println("\n\t\tIterative Fibonacci Sequence");
+            output.println("\n\n\t\tIterative Fibonacci Sequence");
             
             for (int i = 0; i <= userInput; i++){
                 output.print(" " + LoopFib.loopFib(i) + " |");
@@ -81,8 +81,7 @@ public class FibTester {
         catch (NonValidInput ex) {
             ex.printStackTrace();
         }
-        
-        
+  
     }
     
 }
